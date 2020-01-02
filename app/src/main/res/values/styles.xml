@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Appbar" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/alarmTextViewBackground</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ToolbarTitlestyleParent">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="CollapsingTitleStyle" parent="ToolbarTitlestyleParent">
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="ExpandedTitleStyle" parent="ToolbarTitlestyleParent">
+        <item name="android:textColor">@color/alarmTextViewBackground</item>
+    </style>
+
+<!--    <style name="CollapsingTitleStyle" parent="@android:style/TextAppearance">-->
+<!--        <item name="android:textColor">@color/colorBlack</item>-->
+<!--        <item name="android:textSize">20dp</item>-->
+<!--    </style>-->
+
+<!--    <style name="ExpandedTitleStyle" parent="@android:style/TextAppearance">-->
+<!--        <item name="android:textColor">@color/alarmTextViewBackground</item>-->
+<!--        <item name="android:textSize">20dp</item>-->
+<!--    </style>-->
+
+</resources>
