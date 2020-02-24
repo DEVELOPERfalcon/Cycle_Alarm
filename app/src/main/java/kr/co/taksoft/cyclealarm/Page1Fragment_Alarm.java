@@ -7,9 +7,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
@@ -17,15 +19,17 @@ import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 public class Page1Fragment_Alarm extends Fragment {
+
+    View view;
+    Toolbar toolbar;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_page1_alarm, container, false);
-
-        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
-        MainActivity activity = (MainActivity) getActivity();
-        activity.setSupportActionBar(toolbar);
+        view = inflater.inflate(R.layout.fragment_page1_alarm, container, false);
+        toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         setHasOptionsMenu(true);
         return view;
     }
@@ -38,8 +42,8 @@ public class Page1Fragment_Alarm extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.toolbar_items, menu);
+        super.onCreateOptionsMenu(menu, inflater);
     }
 
     @Override

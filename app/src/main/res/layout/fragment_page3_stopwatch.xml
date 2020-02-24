@@ -3,48 +3,100 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Appbar">
-        <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:theme="@style/Appbar"
+        app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:contentScrim="@color/alarmTextViewBackground">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:text="No Data"
-                android:textSize="24dp"
-                android:gravity="center"
-                app:layout_collapseMode="parallax"/>
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
+            android:layout_height="?attr/actionBarSize"
+            app:elevation="0dp"/>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.core.widget.NestedScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
+        android:layout_height="match_parent">
         <LinearLayout
+            android:id="@+id/timer_section"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="250dp">
             <TextView
+                android:id="@+id/root_timer"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"/>
+                android:layout_height="wrap_content"
+                android:text="00:00.00"
+                android:textSize="50sp"
+                android:gravity="center"/>
             <TextView
+                android:id="@+id/sub_timer"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="250dp"/>
+                android:layout_height="wrap_content"
+                android:text="00:00.00"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginBottom="50dp"/>
         </LinearLayout>
 
-    </androidx.core.widget.NestedScrollView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/timer_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@id/timer_section"
+            android:layout_above="@id/button_section"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layoutAnimation="@anim/layout_animation"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        <RelativeLayout
+            android:id="@+id/button_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true">
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="@string/timer_start"
+                android:textSize="24sp"
+                android:layout_centerInParent="true"/>
+            <Button
+                android:id="@+id/btn_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="@string/timer_pause"
+                android:textSize="24sp"
+                android:layout_centerInParent="true"
+                android:theme="@style/pauseBtn"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/btn_continue"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="@string/timer_continue"
+                android:textSize="24sp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/btn_segment_record"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="@string/segment_record"
+                android:textSize="24sp"
+                android:layout_centerInParent="true"
+                android:theme="@style/segmentRecordBtn"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

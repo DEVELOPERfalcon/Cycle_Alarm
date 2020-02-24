@@ -3,6 +3,9 @@
     <color name="colorPrimary">#ff008577</color>
     <color name="colorPrimaryDark">#ff00574B</color>
     <color name="colorAccent">#ffD81B60</color>
-    <color name="alarmTextViewBackground">#ffD3D3D3</color>
+    <color name="alarmTextViewBackground">#E7E6E6</color>
     <color name="colorBlack">#ff000000</color>
+    <color name="tabText">#0957F3</color>
+    <color name="colorRed">#ffFF0000</color>
+    <color name="timeListNum">#6A000000</color>
 </resources>

@@ -5,13 +5,20 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/tabText</item>
     </style>
 
     <style name="Appbar" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <item name="colorPrimary">@color/alarmTextViewBackground</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/tabText</item>
+    </style>
+
+    <style name="pauseBtn">
+        <item name="colorAccent">@color/colorRed</item>
+    </style>
+    <style name="segmentRecordBtn">
+        <item name="colorAccent">@color/colorBlack</item>
     </style>
 
     <style name="ToolbarTitlestyleParent">
@@ -25,15 +32,5 @@
     <style name="ExpandedTitleStyle" parent="ToolbarTitlestyleParent">
         <item name="android:textColor">@color/alarmTextViewBackground</item>
     </style>
-
-<!--    <style name="CollapsingTitleStyle" parent="@android:style/TextAppearance">-->
-<!--        <item name="android:textColor">@color/colorBlack</item>-->
-<!--        <item name="android:textSize">20dp</item>-->
-<!--    </style>-->
-
-<!--    <style name="ExpandedTitleStyle" parent="@android:style/TextAppearance">-->
-<!--        <item name="android:textColor">@color/alarmTextViewBackground</item>-->
-<!--        <item name="android:textSize">20dp</item>-->
-<!--    </style>-->
 
 </resources>

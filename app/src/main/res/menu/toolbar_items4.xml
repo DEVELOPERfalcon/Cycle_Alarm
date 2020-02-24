@@ -2,23 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_add"
+        android:id="@+id/action_add4"
         android:title="add"
         android:icon="@mipmap/ic_add"
         app:showAsAction="always"/>
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_settings4"
         android:title="settings"
         android:icon="@mipmap/ic_setting"
         app:showAsAction="always">
         <menu>
             <item
-                android:id="@+id/delete"
-                android:title="@string/delete_menu"
-                app:showAsAction="always"/>
-            <item
-                android:id="@+id/service"
-                android:title="@string/service_menu"
+                android:id="@+id/timer_sound"
+                android:title="@string/timer_sound"
                 app:showAsAction="always"/>
             <item
                 android:id="@+id/infomation"

@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">Cycle Alarm</string>
-    <string name="toolbar_title">알람</string>
+    <string name="alarm_toolbar_title">알람</string>
+    <string name="world_clock_toolbar_title">세게시간</string>
+    <string name="stopwatch_toolbar_title">스톱워치</string>
+    <string name="timer_toolbar_title">타이머</string>
+
+    <string name="delete_menu">삭제</string>
+    <string name="service_menu">맞춤형 서비스</string>
+    <string name="infomation_menu">시계 앱 정보</string>
+
+    <string name="edit_menu">편집</string>
+    <string name="time_change_menu">시간대 변환</string>
+    <string name="weather_option_menu">날씨 설정</string>
+
+    <string name="timer_sound">타이머 소리 설정</string>
+    <string name="timer_start">시작</string>
+    <string name="timer_pause">중지</string>
+    <string name="segment_record">구간 기록</string>
+    <string name="timer_continue">계속</string>
+    <string name="reset">초기화</string>
 </resources>
